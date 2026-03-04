@@ -201,7 +201,7 @@ MPU6050_Status MPU6050_Init(MPU6050_Handle_t *hmpu, I2C_HandleTypeDef *hi2c)
     hmpu->gyro_sens      = MPU6050_GYRO_SENS_250;
 
     /* Délai power-on — datasheet §6.3 : start-up time 30 ms */
-    HAL_Delay(MPU6050_POWERON_DELAY_MS);
+    HAL_Delay(MPU6050_POWERON_DELAY_MS); /* init: power-on hold */
 
     /* Reset software — datasheet §4.30 : bit DEVICE_RESET auto-clear */
     HAL_StatusTypeDef hal_st = HAL_I2C_Master_Transmit(hi2c, hmpu->i2c_addr,

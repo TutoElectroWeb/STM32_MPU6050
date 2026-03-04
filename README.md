@@ -343,3 +343,9 @@ Voir `exemples/README.md` pour les détails de chaque exemple.
 ## Licence
 
 Libre sous licence MIT.
+
+---
+
+## Version
+
+**v0.9.0**
